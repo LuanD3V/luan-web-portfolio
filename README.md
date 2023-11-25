@@ -10,7 +10,6 @@ Meu site pessoal é uma plataforma interativa e informativa, projetada para apre
 
 - Portfólio de Projetos: O repositório contém uma seção de portfólio que abrange uma variedade de projetos nos quais trabalhei. Cada projeto é cuidadosamente documentado, apresentando detalhes sobre o contexto, tecnologias utilizadas, desafios enfrentados e soluções implementadas.
 - Habilidades Técnicas: Através de uma seção dedicada, são exibidas minhas habilidades técnicas em diferentes tecnologias e linguagens de programação. Isso oferece aos visitantes uma visão abrangente das competências que desenvolvi ao longo do tempo.
-- Blog Técnico: Além do portfólio, mantenho um blog técnico atualizado periodicamente. Neste espaço, compartilho tutoriais, artigos e insights sobre tópicos relevantes no mundo do desenvolvimento de software.
 - Currículo e Contato: Disponibilizo meu currículo atualizado para download, juntamente com informações de contato para que interessados possam entrar em contato comigo diretamente.
 
 ### Como Contribuir:
@@ -36,7 +35,6 @@ My personal website is an interactive and informative platform designed to prese
 
 - Project Portfolio: The repository contains a portfolio section that covers a variety of projects I've worked on. Each project is meticulously documented, providing details about the context, technologies used, challenges faced, and solutions implemented.
 - Technical Skills: Through a dedicated section, my technical skills in different technologies and programming languages are showcased. This offers visitors a comprehensive view of the competencies I have developed over time.
-- Technical Blog: In addition to the portfolio, I maintain an up-to-date technical blog. In this space, I share tutorials, articles, and insights on relevant topics in the world of software development.
 - Resume and Contact: I provide an updated resume for download, along with contact information for anyone interested in getting in touch with me directly.
 
 ### How to Contribute:
