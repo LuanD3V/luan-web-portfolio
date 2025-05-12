@@ -1,0 +1,24 @@
+:root {
+  color-scheme: light dark;
+}
+
+/*
+ * Yellow colors
+ */
+$yellow-900: #fcba28;
+
+/*
+ * Black colors
+ */
+$black-900: #231f20;
+$black-800: #2f2f2f;
+
+/*
+ * Light colors
+ */
+$light-200: #f9f4da;
+$light-100: #fffdf1;
+
+$primary-color: ligth-dark($light-200, $black-900);
+$secondary-color: ligth-dark($black-800, $light-100);
+$accent-color: $yellow-900;

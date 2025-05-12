@@ -1,0 +1,104 @@
+/*
+ * Font Tokens
+ * Definições de tipografia para títulos e corpo de texto
+ */
+
+@use "../tokens/sizes.scss" as sizes;
+
+$font-family: "Inter", sans-serif;
+
+// Títulos
+$h1: (
+  size: sizes.$size-6,
+  // 3rem
+  weight: 700,
+  line-height: 1.2,
+);
+
+$h2: (
+  size: sizes.$size-5,
+  // 2.5rem
+  weight: 700,
+  line-height: 1.3,
+);
+
+$h3: (
+  size: sizes.$size-4,
+  // 2rem
+  weight: 600,
+  line-height: 1.4,
+);
+
+$h4: (
+  size: sizes.$size-3 + 0.25rem,
+  // 1.75rem
+  weight: 600,
+  line-height: 1.5,
+);
+
+$h5: (
+  size: sizes.$size-3,
+  // 1.5rem
+  weight: 500,
+  line-height: 1.6,
+);
+
+$h6: (
+  size: sizes.$size-2 + 0.25rem,
+  // 1.25rem
+  weight: 500,
+  line-height: 1.6,
+);
+
+// Corpo de texto
+$body-xs: (
+  size: sizes.$size-1 - 0.25rem,
+  // 0.75rem
+  weight: 400,
+  line-height: 1.6,
+);
+
+$body-sm: (
+  size: sizes.$size-1 - 0.125rem,
+  // 0.875rem
+  weight: 400,
+  line-height: 1.6,
+);
+
+$body-md: (
+  size: sizes.$size-2,
+  // 1rem
+  weight: 400,
+  line-height: 1.6,
+);
+
+$body-lg: (
+  size: sizes.$size-2 + 0.125rem,
+  // 1.125rem
+  weight: 400,
+  line-height: 1.6,
+);
+
+$body-xl: (
+  size: sizes.$size-2 + 0.25rem,
+  // 1.25rem
+  weight: 400,
+  line-height: 1.6,
+);
+
+:export {
+  fontFamily: $font-family;
+
+  h1: $h1;
+  h2: $h2;
+  h3: $h3;
+  h4: $h4;
+  h5: $h5;
+  h6: $h6;
+
+  bodyXs: $body-xs;
+  bodySm: $body-sm;
+  bodyMd: $body-md;
+  bodyLg: $body-lg;
+  bodyXl: $body-xl;
+}

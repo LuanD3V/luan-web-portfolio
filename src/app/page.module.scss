@@ -1,0 +1,20 @@
+@use "@/styles/colors/colors.scss" as *;
+@use "@/styles/tokens/paddings.scss" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-10;
+  min-height: 100vh;
+  background-color: $secondary-color;
+
+  .title {
+    color: $primary-color;
+  }
+
+  .subtitle {
+    color: $accent-color;
+  }
+}
