@@ -1,5 +1,8 @@
+@use "@/styles/fonts/font.scss" as *;
+
 :root {
   color-scheme: light dark;
+  font-family: $font-family;
 }
 
 * {
@@ -17,4 +20,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
 }

@@ -85,20 +85,3 @@ $body-xl: (
   weight: 400,
   line-height: 1.6,
 );
-
-:export {
-  fontFamily: $font-family;
-
-  h1: $h1;
-  h2: $h2;
-  h3: $h3;
-  h4: $h4;
-  h5: $h5;
-  h6: $h6;
-
-  bodyXs: $body-xs;
-  bodySm: $body-sm;
-  bodyMd: $body-md;
-  bodyLg: $body-lg;
-  bodyXl: $body-xl;
-}

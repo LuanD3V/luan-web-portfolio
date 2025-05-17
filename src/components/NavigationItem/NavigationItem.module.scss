@@ -1,0 +1,13 @@
+@use "@/styles/colors/colors.scss" as *;
+@use "@/styles/tokens/paddings.scss" as *;
+
+.navigationItem {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  padding: $padding-2;
+  cursor: pointer;
+  color: $primary-color;
+  background-color: $secondary-color;
+  border-radius: $padding-2;
+}
