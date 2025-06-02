@@ -29,7 +29,9 @@ const NavigationItem = ({
       aria-disabled={disabled}
       aria-selected={selected}
       aria-label={label}
-      role=""
+      data-selected={selected}
+      data-disabled={disabled}
+      role="NavigationItem"
     >
       {icon && <span className={styles.icon}>{icon}</span>}
       <span className={styles.label}>{label}</span>

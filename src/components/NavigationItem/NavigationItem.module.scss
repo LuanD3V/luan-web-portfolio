@@ -1,13 +1,51 @@
-@use "@/styles/colors/colors.scss" as *;
+@use "@/styles/colors/light.scss" as light;
+@use "@/styles/colors/light-hc.scss" as light-hc;
+
+@use "@/styles/colors/dark.scss" as dark;
+@use "@/styles/colors/dark-hc.scss" as dark-hc;
+
 @use "@/styles/tokens/paddings.scss" as *;
 
 .navigationItem {
   display: flex;
   align-items: center;
+
   width: min-content;
+
   padding: $padding-2;
+
   cursor: pointer;
-  color: $primary-color;
-  background-color: $secondary-color;
+
   border-radius: $padding-2;
+
+  background-color: light-dark(
+    light.$md-sys-color-surface,
+    dark.$md-sys-color-surface
+  );
+  color: light-dark(
+    light.$md-sys-color-on-surface,
+    dark.$md-sys-color-on-surface
+  );
+
+  &[data-selected="true"] {
+    background-color: light-dark(
+      light.$md-sys-color-primary,
+      dark.$md-sys-color-primary
+    );
+    color: light-dark(
+      light.$md-sys-color-on-primary,
+      dark.$md-sys-color-on-primary
+    );
+  }
+
+  &:hover {
+    background-color: light-dark(
+      light.$md-sys-color-primary-container,
+      dark.$md-sys-color-primary-container
+    );
+    color: light-dark(
+      light.$md-sys-color-on-primary-container,
+      dark.$md-sys-color-on-primary-container
+    );
+  }
 }
