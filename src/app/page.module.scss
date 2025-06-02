@@ -1,5 +1,6 @@
-@use "@/styles/colors/colors.scss" as *;
 @use "@/styles/tokens/paddings.scss" as *;
+@use "@/styles/colors/light.scss" as light;
+@use "@/styles/colors/dark.scss" as dark;
 
 .main {
   display: flex;
@@ -8,13 +9,19 @@
   align-items: center;
   padding: $padding-10;
   min-height: 100vh;
-  background-color: $secondary-color;
+  background-color: light-dark(
+    light.$md-sys-color-background,
+    dark.$md-sys-color-background
+  );
 
   .title {
-    color: $primary-color;
+    color: light-dark(light.$md-sys-color-primary, dark.$md-sys-color-primary);
   }
 
   .subtitle {
-    color: $accent-color;
+    color: light-dark(
+      light.$md-sys-color-on-background,
+      dark.$md-sys-color-on-background
+    );
   }
 }
