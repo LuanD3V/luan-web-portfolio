@@ -6,10 +6,24 @@ if [ -z "$file" ]; then
   exit 0
 fi
 
-if [[ "$file" =~ \.(ts|tsx|js|jsx|cjs)$ ]]; then
+biome_config="biome.json"
+if [ ! -f "$biome_config" ]; then
+  exit 0
+fi
+
+extensions=$(jq -r '.files.includes[]?' "$biome_config" 2>/dev/null \
+  | sed -E -n 's/.*\*\.([a-zA-Z0-9]+)$/\1/p' \
+  | paste -sd '|' -)
+
+if [ -z "$extensions" ]; then
+  exit 0
+fi
+
+if [[ "$file" =~ \.($extensions)$ ]]; then
   output=$(npx biome lint "$file" 2>&1)
   if [ $? -ne 0 ]; then
-    echo "{\"additional_context\": \"Biome lint encontrou problemas em $file:\\n$output\"}"
+    jq -n --arg ctx "Biome lint encontrou problemas em $file:\n$output" \
+      '{additional_context: $ctx}'
     exit 0
   fi
 fi
