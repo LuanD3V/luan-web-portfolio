@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".agents/hooks/format.sh",
+        "matcher": "Write"
+      },
+      {
+        "command": ".agents/hooks/lint.sh",
+        "matcher": "Write"
+      }
+    ]
+  }
+}
