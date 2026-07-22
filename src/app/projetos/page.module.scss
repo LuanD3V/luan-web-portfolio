@@ -1,0 +1,50 @@
+@use '@/styles/colors/light.scss' as light;
+@use '@/styles/colors/dark.scss' as dark;
+@use '@/styles/tokens/sizes.scss' as sizes;
+@use '@/styles/tokens/paddings.scss' as paddings;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: sizes.$size-4;
+  padding: paddings.$padding-8 paddings.$padding-5;
+  min-height: 100vh;
+  background-color: light-dark(
+    light.$md-sys-color-background,
+    dark.$md-sys-color-background
+  );
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: sizes.$size-1;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: light-dark(light.$md-sys-color-primary, dark.$md-sys-color-primary);
+}
+
+.subtitle {
+  color: light-dark(
+    light.$md-sys-color-on-background,
+    dark.$md-sys-color-on-background
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(sizes.$size-9 * 4, 1fr));
+  gap: sizes.$size-3;
+}
+
+.empty {
+  padding: paddings.$padding-6 0;
+  text-align: center;
+  color: light-dark(
+    light.$md-sys-color-on-surface-variant,
+    dark.$md-sys-color-on-surface-variant
+  );
+}

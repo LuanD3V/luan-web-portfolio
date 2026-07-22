@@ -1,3 +1,4 @@
+import { Link } from '@/components'
 import styles from './page.module.scss'
 
 export default function Home() {
@@ -5,6 +6,9 @@ export default function Home() {
 		<main className={styles.main}>
 			<h1 className={styles.title}>Portfólio - Luan dos Santos</h1>
 			<h2 className={styles.subtitle}>Em breve</h2>
+			<Link href="/projetos" variant="primary">
+				Projetos
+			</Link>
 		</main>
 	)
 }
