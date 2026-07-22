@@ -1,0 +1,125 @@
+@use '@/styles/colors/light.scss' as light;
+@use '@/styles/colors/dark.scss' as dark;
+@use '@/styles/tokens/sizes.scss' as sizes;
+@use '@/styles/tokens/paddings.scss' as paddings;
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: sizes.$size-1;
+  border-radius: sizes.$size-1;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    text-decoration-color 200ms ease;
+
+  &:focus-visible {
+    outline: 2px solid
+      light-dark(light.$md-sys-color-primary, dark.$md-sys-color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.size-sm {
+  font-size: 0.875rem;
+}
+
+.size-md {
+  font-size: 1rem;
+}
+
+.size-lg {
+  font-size: 1.125rem;
+}
+
+.variant-primary {
+  color: light-dark(light.$md-sys-color-primary, dark.$md-sys-color-primary);
+
+  &:hover:not([aria-disabled='true']) {
+    color: light-dark(
+      light.$md-sys-color-on-primary-container,
+      dark.$md-sys-color-on-primary-container
+    );
+  }
+}
+
+.variant-secondary {
+  color: light-dark(light.$md-sys-color-secondary, dark.$md-sys-color-secondary);
+
+  &:hover:not([aria-disabled='true']) {
+    color: light-dark(
+      light.$md-sys-color-on-secondary-container,
+      dark.$md-sys-color-on-secondary-container
+    );
+  }
+}
+
+.variant-tertiary {
+  color: light-dark(light.$md-sys-color-tertiary, dark.$md-sys-color-tertiary);
+
+  &:hover:not([aria-disabled='true']) {
+    color: light-dark(
+      light.$md-sys-color-on-tertiary-container,
+      dark.$md-sys-color-on-tertiary-container
+    );
+  }
+}
+
+.variant-plain {
+  color: inherit;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+.underline-hover {
+  text-decoration: none;
+
+  &:hover:not([aria-disabled='true']) {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.underline-always {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.iconOnly {
+  padding: paddings.$padding-1;
+  aspect-ratio: 1;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}
